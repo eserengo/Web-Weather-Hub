@@ -1,0 +1,20 @@
+// Breakpoints and container widths
+$grid-breakpoints: (
+  "xxs": 0,
+  "xs": 375px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+);
+
+$container-max-widths: (
+  "xs": 350px,
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+);
+
+
+// Color palette
+$offWhite: #fafafa;
+$offBlack: #050505;
