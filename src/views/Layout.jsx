@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+import Loading from '../components/Loading';
 
 const Layout = () => {
 
@@ -8,7 +10,10 @@ const Layout = () => {
         <span className='fs-5 text-offBlack'>Logo placeholder</span>
         <span className='fs-5 text-offBlack'>Nav Bar placeholder</span>
       </div>
-      <Outlet />
+
+      <Suspense fallback={<Loading />} >
+        <Outlet />
+      </Suspense>
     </>
   )
 }
