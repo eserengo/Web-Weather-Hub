@@ -1,10 +1,10 @@
 import { lazy } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './views/Home'
-import Layout from './views/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss'
 
+const Layout = lazy(() => import('./views/Layout'));
 const Weather = lazy(() => import('./views/Weather'));
 const TodaysForecast = lazy(() => import('./views/TodaysForecast'));
 const TomorrowsForecast = lazy(() => import('./views/TomorrowsForecast'));
