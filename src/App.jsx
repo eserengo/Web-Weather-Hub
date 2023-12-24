@@ -12,6 +12,7 @@ const ThisWeeksForecast = lazy(() => import('./views/ThisWeeksForecast'));
 const Location = lazy(() => import('./views/Location'));
 const About = lazy(() => import('./views/About'));
 const Contact = lazy(() => import('./views/Contact'));
+const PageNotFound = lazy(() => import('./views/PageNotFound'));
 
 const App = () => {
   const router = createBrowserRouter([
@@ -53,7 +54,11 @@ const App = () => {
           element: <Contact />,
         },
       ]
-    }
+    },
+    {
+      path: '*',
+      element: <PageNotFound />
+    },
   ])
 
   return (

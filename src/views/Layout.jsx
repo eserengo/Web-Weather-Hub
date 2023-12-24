@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
-import ErrorFallback from './ErrorFallback';
+import ErrorFallback from '../services/ErrorFallback';
 import Loading from '../components/Loading';
 
 const Layout = () => {
@@ -10,7 +10,8 @@ const Layout = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onReset={() => navigate('/')}
+      onReset={() => navigate(-1)}
+      onError={error => error}
     >
       <Suspense fallback={<Loading />}>
         <div className='d-flex align-items-start justify-content-between'>
