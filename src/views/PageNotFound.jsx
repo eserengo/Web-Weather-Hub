@@ -7,9 +7,9 @@ const PageNotFound = () => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div role="alert" className='min-vh-100 d-flex flex-column align-items-center justify-content-center bg-danger bg-gradient'>
-        <p className='text-offWhite fs-3 text-bold'>Something went wrong</p>
-        <pre className='text-offWhite fs-4'>Page not found</pre>
+      <div role="alert" className='min-vh-100 d-flex flex-column align-items-center justify-content-center'>
+        <p className='fs-3 fw-bold'>Something went wrong:</p>
+        <pre className='fs-4 text-danger'>Page not found</pre>
         <button onClick={() => navigate(-1)}>Go Back</button>
       </div>
     </Suspense>

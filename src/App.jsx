@@ -1,6 +1,7 @@
-import { lazy } from 'react'
+import { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './views/Home'
+import Loading from './components/Loading'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss'
 
@@ -33,7 +34,7 @@ const App = () => {
             },
             {
               path: 'tomorrow',
-              element: <TomorrowsForecast />,
+              element: <TomorrowsForecast />
             },
             {
               path: 'thisweek',
@@ -57,12 +58,14 @@ const App = () => {
     },
     {
       path: '*',
-      element: <PageNotFound />
+      element: <PageNotFound />,
     },
   ])
 
   return (
-    <RouterProvider router={router} />
+    <Suspense fallback={<Loading />}>
+      <RouterProvider router={router} />
+    </Suspense>
   )
 }
 

@@ -6,6 +6,7 @@
 */
 
 @import "./scss/abstracts/variables";
+@import "./scss/abstracts/mixins";
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
@@ -19,6 +20,8 @@
   --bs-body-font-family: "Inter", sans-serif;
   --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
+  --bs-body-bg: $offWhite;
+  --bs-body-color: $offBlack;
 }
 
 * {
@@ -27,4 +30,16 @@
   padding: 0;
   margin: 0;
   user-select: none;
+}
+
+.welcomeAtDay {
+  @include bgAtDay(to top, "./assets/welcome/optimizedWelcomeAtDay.jpg", "./assets/welcome/minifiedWelcomeAtDay.jpeg");
+}
+
+.welcomeAtNight {
+  @include bgAtNight(to top, "./assets/welcome/optimizedWelcomeAtNight.jpg", "./assets/welcome/minifiedWelcomeAtNight.jpeg");
+}
+
+.getStarted {
+  @include customBtn(false);
 }

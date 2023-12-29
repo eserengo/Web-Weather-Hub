@@ -1,7 +1,19 @@
+import { ErrorBoundary } from 'react-error-boundary'
+import { useNavigate } from 'react-router-dom'
+import ErrorFallback from '../services/ErrorFallback'
+import Welcome from '../components/Welcome'
+
 const Home = () => {
+  const navigate = useNavigate();
 
   return (
-    <h2 className='fs-2 text-offBlack'>Home</h2>
+    <ErrorBoundary
+      FallbackComponent={ErrorFallback}
+      onReset={() => navigate(0)}
+      onError={error => error}
+    >
+      <Welcome />  
+    </ErrorBoundary>
   )
 }
 

@@ -1,17 +1,21 @@
 import Spinner from 'react-bootstrap/Spinner'
 
 const Loading = () => (
-  <div className='d-flex align-items-center justify-content-center'>
-    <Spinner
-      as='span'
-      animation='border'
-      size='sm'
-      role='status'
-      aria-hidden='true'
-      variant='dark'
-    />
-    <span className='fs-4 text-offBlack ms-1'>Loading...</span>
-  </div>
+  <main className='container-fluid vh-100 p-2'>
+    <article className='row h-100 g-0'>
+      <section className='col d-flex align-items-center justify-content-center'>
+        <Spinner
+          as='span'
+          animation='border'
+          size='sm'
+          role='status'
+          aria-hidden='true'
+          variant='dark'
+        />
+        <span className='fs-4 text-offBlack ms-2'>Loading...</span>
+      </section>
+    </article>
+  </main>
 )
 
 export default Loading;
