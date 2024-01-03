@@ -1,99 +1,131 @@
 @use 'sass:color';
 @import './variables';
 
-@mixin bgOptions {
+@mixin bg-options {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-@mixin bgAtDay($dir, $Overlay, $minifiedOverlay) {
+@mixin bg-day($dir, $optimizedOverlay, $minifiedOverlay) {
   background-image: 
     linear-gradient($dir, rgba($offBlack, 0.75), rgba($offBlack, 0.5), rgba($offBlack, 0.25), transparent),
-    url($Overlay),
+    url($optimizedOverlay),
     url($minifiedOverlay);
-  @include bgOptions();
+  @include bg-options();
 }
 
-@mixin bgAtNight($dir, $Overlay, $minifiedOverlay) {
+@mixin bg-night($dir, $optimizedOverlay, $minifiedOverlay) {
   background-image: 
-    linear-gradient($dir, rgba($offBlack, 0.66), rgba($offBlack, 0.33), transparent),
-    url($Overlay),
+    linear-gradient($dir, rgba($offBlack, 0.5), rgba($offBlack, 0.25), transparent),
+    url($optimizedOverlay),
     url($minifiedOverlay);
-  @include bgOptions();
+  @include bg-options();
 }
 
-@mixin customBtn($pill) {
-  border: 1px solid rgba($offBlack, 0.25);
-  background-image: linear-gradient(45deg, darken($offWhite, 25%), $offWhite);
-  box-shadow: 
-    inset 2px -1px 1px 1px rgba($offWhite, 0.5),
-    inset -3px 2px 5px 1px rgba($offBlack, 0.25),
-    4px 1px 1px 0 rgba($offBlack, 0.25),
-    -1px -3px 1px 0 rgba($offBlack, 0.25),
-    4px -3px 1px 0 rgba($offBlack, 0.25),
-    -1px -1px 5px 0 rgba($offBlack, 0.25);
-
-  @if $pill {
-    width: auto;
-    border-radius: 2rem;
-    padding: 0.5rem 2rem;
-  } @else {
-    width: 3rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    padding: 0.5rem;
-  }
-
-  & .icon {
-    width: 2rem;
-    height: 2rem;
-
-    & .path {
-      fill: lighten($offBlack, 25%);
-    }
-  }
+@mixin icon {
+  display: block;
+  background-color: $offWhite;
+  width: 3rem;
+  aspect-ratio: 1;
+  border: 1px solid darken($offWhite, 25%);
+  border-radius: 50%;
+  padding: calc(0.5rem - 2px) 0.5rem;
 
   &:hover,
   &:focus {
     cursor: pointer;
-
-    & .icon {
+    border-color: darken($offWhite, 50%);
+    & .svg {
       & .path {
         fill: $offBlack;
+      }
+      & .shape {
+        stroke: $offBlack;
       }
     }
   }
 
-  &:active {
-    box-shadow: 
-      inset 2px -1px 1px 2px rgba($offWhite, 0.5),
-      inset -3px 2px 5px 0 rgba($offBlack, 0.25),
-      3px 1px 1px 0 rgba($offBlack, 0.25),
-      -1px -1px 1px 0 rgba($offBlack, 0.25),
-      3px -1px 1px 0 rgba($offBlack, 0.25),
-      -1px -1px 5px 0 rgba($offBlack, 0.25),
-      4px 0 1px 0 rgba(darken($offWhite, 75%), 0.5);
-    transform: translate(1px, -1px);
-  }
+  & .svg {
+    width: 2rem;
+    height: 2rem;
 
-  @media screen and (width >= 576px) {
-    @if $pill {
-      border-radius: 2.5rem;
-      padding: 0.75rem 2.5rem;
-    } @else {
-      width: 3.5rem;
-      padding: 0.75rem;
+    & .path {
+      fill: lighten($offBlack, 50%);
+    }
+
+    & .shape {
+      stroke: lighten($offBlack, 50%);
     }
   }
 
-  @media screen and (width >= 1024px) {
-    @if $pill {
-      border-radius: 3rem;
-      padding: 1rem 3rem;
-    } @else {
-      width: 4rem;
-      padding: 1rem;
+  // @media screen and (width >= 576px) {
+  //   width: 3.5rem;
+  //   padding: 1rem;
+  // }
+
+  // @media screen and (width >= 1024px) {
+  //   width: 4rem;
+  //   padding: 1.25rem;
+  // }
+}
+
+@mixin button {
+  text-decoration: none;
+
+  & .btn-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    border: 1px solid darken($offWhite, 25%);
+    border-radius: 2rem;
+    padding: 0.125rem;
+
+    & .text {
+      font-size: 1rem;
+      font-weight: 700;
+      color: lighten($offBlack, 50%);
+      margin-right: calc(0.75rem - 0.125rem);
     }
+
+    &:hover,
+    &:focus {
+      border-color: darken($offWhite, 50%);
+      & .custom-icon {
+        border-color: darken($offWhite, 50%);
+        & .svg {
+          & .path {
+            fill: $offBlack;
+          }
+          & .shape {
+            stroke: $offBlack;
+          }
+        }
+      }
+      & .text {
+        color: $offBlack;
+      }
+    }
+  }
+
+  & .btn-container.active {
+    border-color: darken($offWhite, 50%);
+      & .custom-icon {
+        background-color: $offBlack;
+        border-color: $offBlack;
+        & .svg {
+          & .path {
+            fill: $offWhite;
+          }
+          & .shape {
+            stroke: $offWhite;
+          }
+        }
+      }
+      & .text {
+        color: $offBlack;
+      }
   }
 }

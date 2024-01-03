@@ -7,12 +7,12 @@ const Loading = () => (
         <Spinner
           as='span'
           animation='border'
-          size='sm'
+          size='md'
           role='status'
           aria-hidden='true'
           variant='dark'
         />
-        <span className='fs-4 text-offBlack ms-2'>Loading...</span>
+        <span className='fs-3 ms-2'>Loading...</span>
       </section>
     </article>
   </main>

@@ -1,10 +1,3 @@
-/*
- Name: Web Weather Hub.
- Description: A live weather forecast app.
- Author: Federico Borzani
- GitHub: https://github.com/eserengo/
-*/
-
 @import "./scss/abstracts/variables";
 @import "./scss/abstracts/mixins";
 
@@ -12,7 +5,7 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-@import "./scss/abstracts/mapAmends";
+@import "./scss/utils/mapAmends";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -32,14 +25,8 @@
   user-select: none;
 }
 
-.welcomeAtDay {
-  @include bgAtDay(to top, "./assets/welcome/optimizedWelcomeAtDay.jpg", "./assets/welcome/minifiedWelcomeAtDay.jpeg");
+body {
+  min-width: 200px;
 }
 
-.welcomeAtNight {
-  @include bgAtNight(to top, "./assets/welcome/optimizedWelcomeAtNight.jpg", "./assets/welcome/minifiedWelcomeAtNight.jpeg");
-}
-
-.getStarted {
-  @include customBtn(false);
-}
+@import "./scss/utils/classes"

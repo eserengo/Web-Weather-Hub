@@ -1,0 +1,15 @@
+.welcomeAtDay {
+  @include bg-day(to top, "./assets/welcome/optimizedWelcomeAtDay.jpg", "./assets/welcome/minifiedWelcomeAtDay.jpeg");
+}
+
+.welcomeAtNight {
+  @include bg-night(to top, "./assets/welcome/optimizedWelcomeAtNight.jpg", "./assets/welcome/minifiedWelcomeAtNight.jpeg");
+}
+
+.custom-icon {
+  @include icon();
+}
+
+.custom-btn {
+  @include button();
+}
