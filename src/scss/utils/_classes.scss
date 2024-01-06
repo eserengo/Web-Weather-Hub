@@ -1,15 +1,31 @@
-.welcomeAtDay {
+.welcome-day {
   @include bg-day(to top, "./assets/welcome/optimizedWelcomeAtDay.jpg", "./assets/welcome/minifiedWelcomeAtDay.jpeg");
 }
 
-.welcomeAtNight {
+.welcome-night {
   @include bg-night(to top, "./assets/welcome/optimizedWelcomeAtNight.jpg", "./assets/welcome/minifiedWelcomeAtNight.jpeg");
+}
+
+.welcome-icon {
+  @include icon-options();
 }
 
 .custom-icon {
   @include icon();
 }
 
+.custom-wrap {
+  @include button(true);
+}
+
 .custom-btn {
-  @include button();
+  @include button(false);
+}
+
+.custom-bar {
+  @include fixed-menu();
+}
+
+.tab-bar {
+  @include bar();
 }

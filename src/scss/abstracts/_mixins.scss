@@ -7,9 +7,29 @@
   background-position: center center;
 }
 
+@mixin icon-options {
+  width: 3rem;
+  aspect-ratio: 1;
+  padding: calc(0.5rem - 2px) 0.5rem;  
+  display: block;
+  background-color: $clr-offWhite;
+  border: 1px solid $drk-offWhite-25;
+  border-radius: 50%;
+
+  & .svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @media screen and (width >= 1024px) {
+    width: 4rem;
+    padding: calc(1rem - 2px) 1rem;
+  }
+}
+
 @mixin bg-day($dir, $optimizedOverlay, $minifiedOverlay) {
   background-image: 
-    linear-gradient($dir, rgba($offBlack, 0.75), rgba($offBlack, 0.5), rgba($offBlack, 0.25), transparent),
+    linear-gradient($dir, $opq-offBlack-75, $opq-offBlack-50, $opq-offBlack-25, transparent),
     url($optimizedOverlay),
     url($minifiedOverlay);
   @include bg-options();
@@ -17,115 +37,153 @@
 
 @mixin bg-night($dir, $optimizedOverlay, $minifiedOverlay) {
   background-image: 
-    linear-gradient($dir, rgba($offBlack, 0.5), rgba($offBlack, 0.25), transparent),
+    linear-gradient($dir, $opq-offBlack-50, $opq-offBlack-25, transparent),
     url($optimizedOverlay),
     url($minifiedOverlay);
   @include bg-options();
 }
 
 @mixin icon {
-  display: block;
-  background-color: $offWhite;
-  width: 3rem;
-  aspect-ratio: 1;
-  border: 1px solid darken($offWhite, 25%);
-  border-radius: 50%;
-  padding: calc(0.5rem - 2px) 0.5rem;
+  @include icon-options();
+    
+  & .svg {
+    & .path {
+      fill: $lgt-offBlack-50;
+    }
+    & .shape {
+      stroke: $lgt-offBlack-50;
+    }
+  }
 
   &:hover,
   &:focus {
     cursor: pointer;
-    border-color: darken($offWhite, 50%);
+    border-color: $drk-offWhite-50;
     & .svg {
       & .path {
-        fill: $offBlack;
+        fill: $clr-offBlack;
       }
       & .shape {
-        stroke: $offBlack;
+        stroke: $clr-offBlack;
       }
     }
   }
 
-  & .svg {
-    width: 2rem;
-    height: 2rem;
-
-    & .path {
-      fill: lighten($offBlack, 50%);
-    }
-
-    & .shape {
-      stroke: lighten($offBlack, 50%);
+  &:active {
+    background-image: linear-gradient(45deg, $clr-offBlack, $lgt-offBlack-25);
+    border-color: $clr-offBlack;
+    & .svg {
+      & .path {
+        fill: $clr-offWhite;
+      }
+      & .shape {
+        stroke: $clr-offWhite;
+      }
     }
   }
-
-  // @media screen and (width >= 576px) {
-  //   width: 3.5rem;
-  //   padding: 1rem;
-  // }
-
-  // @media screen and (width >= 1024px) {
-  //   width: 4rem;
-  //   padding: 1.25rem;
-  // }
 }
 
-@mixin button {
+@mixin button($wrap) {
   text-decoration: none;
 
   & .btn-container {
+    background-color: $clr-offWhite;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: flex-start;
     gap: 0.5rem;
-    border: 1px solid darken($offWhite, 25%);
+    border: 1px solid $drk-offWhite-25;
     border-radius: 2rem;
     padding: 0.125rem;
 
+    @if($wrap) {
+      justify-content: flex-start;
+    } @else {
+      justify-content: flex-end;
+    }
+
     & .text {
-      font-size: 1rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      color: lighten($offBlack, 50%);
-      margin-right: calc(0.75rem - 0.125rem);
+      color: $lgt-offBlack-50;
+
+      @if($wrap) {
+        margin-right: calc(0.75rem - 0.125rem);
+      } @else {
+        margin-left: calc(0.75rem - 0.125rem);
+      }
     }
 
     &:hover,
     &:focus {
-      border-color: darken($offWhite, 50%);
+      border-color: $drk-offWhite-50;
       & .custom-icon {
-        border-color: darken($offWhite, 50%);
+        border-color: $drk-offWhite-50;
         & .svg {
           & .path {
-            fill: $offBlack;
+            fill: $clr-offBlack;
           }
           & .shape {
-            stroke: $offBlack;
+            stroke: $clr-offBlack;
           }
         }
       }
       & .text {
-        color: $offBlack;
+        color: $clr-offBlack;
       }
     }
   }
 
-  & .btn-container.active {
-    border-color: darken($offWhite, 50%);
+  &.active,
+  &:active {
+    & .btn-container {
+      border-color: $drk-offWhite-50;
       & .custom-icon {
-        background-color: $offBlack;
-        border-color: $offBlack;
+        background-image: linear-gradient(45deg, $clr-offBlack, $lgt-offBlack-25);
+        border-color: $clr-offBlack;
         & .svg {
           & .path {
-            fill: $offWhite;
+            fill: $clr-offWhite;
           }
           & .shape {
-            stroke: $offWhite;
+            stroke: $clr-offWhite;
           }
         }
       }
       & .text {
-        color: $offBlack;
+        color: $clr-offBlack;
       }
+    }
+  }
+
+  @media screen and (width >= 1024px) {
+    & .btn-container {
+      border-radius: 2.5rem;
+      & .text {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@mixin fixed-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 2;
+  background-image: linear-gradient(45deg, rgba($drk-offWhite-25, 0.95), rgba($clr-offWhite, 0.95));
+}
+
+@mixin bar {
+  display: inline-block;
+  border: 1px solid $drk-offWhite-25;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  z-index: 1;
+
+  @media screen and (width >= 1024px) {
+    border-radius: 2.5rem;
   }
 }

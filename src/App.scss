@@ -13,8 +13,8 @@
   --bs-body-font-family: "Inter", sans-serif;
   --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
-  --bs-body-bg: $offWhite;
-  --bs-body-color: $offBlack;
+  --bs-body-bg: $clr-offWhite;
+  --bs-body-color: $clr-offBlack;
 }
 
 * {
@@ -26,7 +26,7 @@
 }
 
 body {
-  min-width: 200px;
+  min-width: 261px;
 }
 
 @import "./scss/utils/classes"

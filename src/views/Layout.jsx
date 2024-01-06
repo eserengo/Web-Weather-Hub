@@ -11,7 +11,12 @@ const Layout = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onReset={() => navigate(-1)}
+      onReset={
+        () => {
+          navigate(-1);
+          console.clear();
+        }
+      }
       onError={error => error}
     >
       <header className='d-flex align-items-start justify-content-between p-2'>
@@ -20,6 +25,11 @@ const Layout = () => {
       </header>
 
       <Outlet />
+
+      <footer className='p-2'>
+        <span className='fs-4'>&reg;</span>
+        <span className='fs-6 fw-light'>2024 under License | All rights reserved.</span>
+      </footer>
     </ErrorBoundary>
   )
 }

@@ -1,6 +1,6 @@
 $custom-theme-colors: (
-  "offWhite": $offWhite,
-  "offBlack": $offBlack,
+  "offWhite": $clr-offWhite,
+  "offBlack": $clr-offBlack,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);

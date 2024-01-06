@@ -5,6 +5,7 @@ $grid-breakpoints: (
   "sm": 576px,
   "md": 768px,
   "lg": 1024px,
+  "xl": 1200px,
 );
 
 $container-max-widths: (
@@ -12,9 +13,22 @@ $container-max-widths: (
   "sm": 540px,
   "md": 720px,
   "lg": 960px,
+  "xl": 1125px,
 );
 
 
 // Theme colors
-$offWhite: #fafafa;
-$offBlack: #050505;
+// Base
+$clr-offWhite: #fafafa;
+$clr-offBlack: #050505;
+
+// Lightness
+$drk-offWhite-25: darken($clr-offWhite, 25%);
+$drk-offWhite-50: darken($clr-offWhite, 50%);
+$lgt-offBlack-25: lighten($clr-offBlack, 25%);
+$lgt-offBlack-50: lighten($clr-offBlack, 50%);
+
+// Opaque
+$opq-offBlack-75: rgba($clr-offBlack, 0.75);
+$opq-offBlack-50: rgba($clr-offBlack, 0.5);
+$opq-offBlack-25: rgba($clr-offBlack, 0.25);

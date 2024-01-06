@@ -14,7 +14,7 @@ const Logo = () => {
         <Icon />
       </Link>
 
-      <Link to={'/'} className='custom-btn d-none d-sm-block'>
+      <Link to={'/'} className='custom-wrap d-none d-sm-block'>
         <div className='btn-container'>
           <Icon />
           <span className='text'>Web Weather Hub</span>

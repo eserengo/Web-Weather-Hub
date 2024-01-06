@@ -9,7 +9,12 @@ const Home = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onReset={() => navigate(0)}
+      onReset={
+        () => {
+          navigate(-1);
+          console.clear();
+        }
+      }
       onError={error => error}
     >
       <Welcome />  
