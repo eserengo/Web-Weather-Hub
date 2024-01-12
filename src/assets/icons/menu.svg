@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg class="svg" width="32px" height="32px" viewBox="0 0 24 24" id="three-dots" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(24) rotate(90)">
-    <circle class="shape" cx="1" cy="1" r="1" transform="translate(5 11)" stroke-miterlimit="10" stroke-width="2"/>
-    <circle class="shape" cx="1" cy="1" r="1" transform="translate(11 11)" stroke-miterlimit="10" stroke-width="2"/>
-    <circle class="shape" cx="1" cy="1" r="1" transform="translate(17 11)" stroke-miterlimit="10" stroke-width="2"/>
-  </g>
+<svg class="svg" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="shape" d="M 4 6 L 20 6 M 10 12 L 20 12 M 14 18 L 20 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

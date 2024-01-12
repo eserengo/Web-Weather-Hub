@@ -5,17 +5,16 @@ import Loading from './components/Loading'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss'
 
-const Layout = lazy(() => import('./views/Layout'));
-const Weather = lazy(() => import('./views/Weather'));
-const TodaysForecast = lazy(() => import('./views/TodaysForecast'));
-const TomorrowsForecast = lazy(() => import('./views/TomorrowsForecast'));
-const ThisWeeksForecast = lazy(() => import('./views/ThisWeeksForecast'));
-const Location = lazy(() => import('./views/Location'));
-const About = lazy(() => import('./views/About'));
-const Contact = lazy(() => import('./views/Contact'));
-const PageNotFound = lazy(() => import('./views/PageNotFound'));
-
 const App = () => {
+  const Layout = lazy(() => import('./views/Layout'));
+  const Weather = lazy(() => import('./views/Weather'));
+  const TodaysForecast = lazy(() => import('./views/TodaysForecast'));
+  const TomorrowsForecast = lazy(() => import('./views/TomorrowsForecast'));
+  const ThisWeeksForecast = lazy(() => import('./views/ThisWeeksForecast'));
+  const Location = lazy(() => import('./views/Location'));
+  const About = lazy(() => import('./views/About'));
+  const Contact = lazy(() => import('./views/Contact'));
+  const PageNotFound = lazy(() => import('./views/PageNotFound'));
   const router = createBrowserRouter([
     {
       path: '/',
@@ -29,7 +28,7 @@ const App = () => {
           element: <Weather />,
           children: [
             {
-              index: true,
+              path: 'today',
               element: <TodaysForecast />,
             },
             {

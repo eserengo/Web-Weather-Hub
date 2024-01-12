@@ -16,11 +16,10 @@ $container-max-widths: (
   "xl": 1125px,
 );
 
-
 // Theme colors
 // Base
-$clr-offWhite: #fafafa;
-$clr-offBlack: #050505;
+$clr-offWhite: hsl(0, 0%, 97%);
+$clr-offBlack: hsl(0, 0%, 3%);
 
 // Lightness
 $drk-offWhite-25: darken($clr-offWhite, 25%);
@@ -32,3 +31,6 @@ $lgt-offBlack-50: lighten($clr-offBlack, 50%);
 $opq-offBlack-75: rgba($clr-offBlack, 0.75);
 $opq-offBlack-50: rgba($clr-offBlack, 0.5);
 $opq-offBlack-25: rgba($clr-offBlack, 0.25);
+
+// Typography
+$fnt-size-075: 0.75rem;

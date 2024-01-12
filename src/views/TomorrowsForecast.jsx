@@ -1,7 +1,9 @@
 const TomorrowsForecast = () => {
 
   return (
-    <h2 className='fs-2 text-offBlack'>Tomorrow Forecast</h2>
+    <section className='col-12'>
+      <h2 className='fs-2'>Tomorrow Forecast</h2>
+    </section>
   )
 }
 

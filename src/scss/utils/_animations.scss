@@ -1,0 +1,11 @@
+@keyframes clockwise {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterclockwise {
+  to {
+    transform: rotate(-360deg);
+  }
+}

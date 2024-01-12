@@ -7,7 +7,7 @@ const TabBar = () => {
 
   return (
     <nav className='d-flex flex-row flex-nowrap align-items-center justify-content-between gap-1'>
-      <NavLink to={'.'} className='custom-wrap' end>
+      <NavLink to={'today'} className='custom-wrap' end>
         {({ isActive }) =>
           isActive ? (
             <div className='btn-container'>

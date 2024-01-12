@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useErrorBoundary } from 'react-error-boundary'
-import ErrorIcon from '../components/icons/ErrorIcon'
+import ErrorSign from '../components/icons/ErrorSign'
 import LeftArrowSvg from '../assets/icons/left-arrow.svg?react'
 import PropTypes from 'prop-types'
 
@@ -12,7 +12,7 @@ const ErrorFallback = ({ error }) => {
       <article className='row h-100 g-0 align-items-center'>
         <section className='col'>
           <div role='alert' className='d-flex flex-column align-items-center justify-content-center'>
-            <ErrorIcon />
+            <ErrorSign />
             <h2 className='fs-3 fw-bold mt-2 '>Something went wrong:</h2>
             <pre className='fs-4 text-danger'>{error.message}</pre>
             <Link onClick={resetBoundary} className='custom-btn'>

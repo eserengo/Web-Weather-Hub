@@ -19,16 +19,20 @@ const Layout = () => {
       }
       onError={error => error}
     >
-      <header className='d-flex align-items-start justify-content-between p-2'>
-        <Logo />
-        <NavBar />
+      <header className='container-fluid p-2'>
+        <article className='row h-100 g-0'>
+          <section className='col-12 d-flex align-items-center justify-content-between'>
+            <Logo />
+            <NavBar />
+          </section>
+        </article>
       </header>
 
       <Outlet />
 
-      <footer className='p-2'>
-        <span className='fs-4'>&reg;</span>
-        <span className='fs-6 fw-light'>2024 under License | All rights reserved.</span>
+      <footer className='col-12 p-2'>
+        <span className='fs-5'>&reg;</span>
+        <span className='fs-7 fw-light ms-1'>2024 Licensed.</span>
       </footer>
     </ErrorBoundary>
   )

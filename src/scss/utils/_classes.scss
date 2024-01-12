@@ -23,9 +23,17 @@
 }
 
 .custom-bar {
-  @include fixed-menu();
+  @include fixed-screen();
 }
 
 .tab-bar {
   @include bar();
+}
+
+.fs-7 {
+  @include fs-7();
+}
+
+.spin {
+  @include rotateSVG;
 }

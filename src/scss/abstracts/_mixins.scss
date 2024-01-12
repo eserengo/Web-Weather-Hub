@@ -1,5 +1,6 @@
-@use 'sass:color';
-@import './variables';
+@use "sass:color";
+@import "./variables";
+@import "../utils/animations";
 
 @mixin bg-options {
   background-repeat: no-repeat;
@@ -166,18 +167,37 @@
   }
 }
 
-@mixin fixed-menu {
+@mixin fixed-screen {
   position: fixed;
   top: 0;
   left: 0;
   min-width: 100vw;
   min-height: 100vh;
   z-index: 2;
-  background-image: linear-gradient(45deg, rgba($drk-offWhite-25, 0.95), rgba($clr-offWhite, 0.95));
+  transition: all 0.7s ease-in;
+
+  &.open {
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+  }
+
+  &.closed {
+    transform: translateX(100%);
+  }
+
+  & .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $clr-offWhite;
+    padding-inline: 2rem 0.5rem;
+    border-left: 1px solid $drk-offWhite-25;
+  }
 }
 
 @mixin bar {
   display: inline-block;
+  background-image: linear-gradient(45deg, $clr-offBlack, $lgt-offBlack-25);
   border: 1px solid $drk-offWhite-25;
   border-radius: 2rem;
   padding: 0.25rem;
@@ -185,5 +205,25 @@
 
   @media screen and (width >= 1024px) {
     border-radius: 2.5rem;
+  }
+}
+
+@mixin fs-7 {
+  font-size: $fnt-size-075;
+}
+
+@mixin rotateSVG {
+  & .svg {
+    & .clockwise {
+      animation: clockwise 3s linear infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    & .counterclockwise {
+      animation: counterclockwise 3s linear infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
   }
 }

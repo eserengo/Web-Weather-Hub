@@ -1,7 +1,9 @@
 const ThisWeeksForecast = () => {
 
   return (
-    <h2 className='fs-2 text-offBlack'>This Week Forecast</h2>
+    <section className='col-12'>
+      <h2 className='fs-2'>This Week Forecast</h2>
+    </section>
   )
 }
 

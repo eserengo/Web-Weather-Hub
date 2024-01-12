@@ -1,6 +1,8 @@
+import { Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { useNavigate } from 'react-router-dom'
 import ErrorFallback from '../services/ErrorFallback'
+import Loading from '../components/Loading'
 import Welcome from '../components/Welcome'
 
 const Home = () => {
@@ -17,7 +19,9 @@ const Home = () => {
       }
       onError={error => error}
     >
-      <Welcome />  
+      <Suspense fallback={<Loading />}>
+        <Welcome />
+      </Suspense>
     </ErrorBoundary>
   )
 }
