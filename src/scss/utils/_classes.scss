@@ -1,9 +1,289 @@
 .welcome-day {
-  @include bg-day(to top, "./assets/welcome/optimizedWelcomeAtDay.jpg", "./assets/welcome/minifiedWelcomeAtDay.jpeg");
+  @include bg-day(to top, "./assets/bgAtWelcome/welcomeAtDay.jpg", "./assets/bgAtWelcome/minifiedWelcomeAtDay.jpeg");
 }
 
 .welcome-night {
-  @include bg-night(to top, "./assets/welcome/optimizedWelcomeAtNight.jpg", "./assets/welcome/minifiedWelcomeAtNight.jpeg");
+  @include bg-night(to top, "./assets/bgAtWelcome/welcomeAtNight.jpg", "./assets/bgAtWelcome/minifiedWelcomeAtNight.jpeg");
+}
+
+.day-clear {
+  @include bg-day(to right, "./assets/bgAt4K/dayClear.jpg", "./assets/bgAt4K/minifiedDayClear.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/dayClear.jpg", "./assets/bgAt8K/minifiedDayClear.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-mainly-clear {
+  @include bg-day(to right, "./assets/bgAt4K/dayMainlyClear.jpg", "./assets/bgAt4K/minifiedDayMainlyClear.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/mainlyClear.jpg", "./assets/bgAt8K/minifiedMainlyClear.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-partly-cloudy {
+  @include bg-day(to right, "./assets/bgAt4K/dayPartlyCloudy.jpg", "./assets/bgAt4K/minifiedDayPartlyCloudy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/partlyCloudy.jpg", "./assets/bgAt8K/minifiedPartlyCloudy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-overcast {
+  @include bg-day(to right, "./assets/bgAt4K/dayOvercast.jpg", "./assets/bgAt4K/minifiedDayOvercast.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/overcast.jpg", "./assets/bgAt8K/minifiedOvercast.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-foggy {
+  @include bg-day(to right, "./assets/bgAt4K/dayFoggy.jpg", "./assets/bgAt4K/minifiedDayFoggy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/foggy.jpg", "./assets/bgAt8K/minifiedFoggy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-drizzle {
+  @include bg-day(to right, "./assets/bgAt4K/dayDrizzle.jpg", "./assets/bgAt4K/minifiedDayDrizzle.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/drizzle.jpg", "./assets/bgAt8K/minifiedDrizzle.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-rainy {
+  @include bg-day(to right, "./assets/bgAt4K/dayRainy.jpg", "./assets/bgAt4K/minifiedDayRainy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/rainy.jpg", "./assets/bgAt8K/minifiedRainy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-snowy {
+  @include bg-day(to right, "./assets/bgAt4K/daySnowy.jpg", "./assets/bgAt4K/minifiedDaySnowy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/snowy.jpg", "./assets/bgAt8K/minifiedSnowy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-showers {
+  @include bg-day(to right, "./assets/bgAt4K/dayShowers.jpg", "./assets/bgAt4K/minifiedDayShowers.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/showers.jpg", "./assets/bgAt8K/minifiedShowers.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.day-stormy {
+  @include bg-day(to right, "./assets/bgAt4K/dayStormy.jpg", "./assets/bgAt4K/minifiedDayStormy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-day(to right, "./assets/bgAt8K/stormy.jpg", "./assets/bgAt8K/minifiedStormy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-clear {
+  @include bg-night(to right, "./assets/bgAt4K/nightClear.jpg", "./assets/bgAt4K/minifiedNightClear.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/nightClear.jpg", "./assets/bgAt8K/minifiedNightClear.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-mainly-clear {
+  @include bg-night(to right, "./assets/bgAt4K/nightMainlyClear.jpg", "./assets/bgAt4K/minifiedNightMainlyClear.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/mainlyClear.jpg", "./assets/bgAt8K/minifiedMainlyClear.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-partly-cloudy {
+  @include bg-night(to right, "./assets/bgAt4K/nightPartlyCloudy.jpg", "./assets/bgAt4K/minifiedNightPartlyCloudy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/partlyCloudy.jpg", "./assets/bgAt8K/minifiedPartlyCloudy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-overcast {
+  @include bg-night(to right, "./assets/bgAt4K/nightOvercast.jpg", "./assets/bgAt4K/minifiedNightOvercast.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/overcast.jpg", "./assets/bgAt8K/minifiedOvercast.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-foggy {
+  @include bg-night(to right, "./assets/bgAt4K/nightFoggy.jpg", "./assets/bgAt4K/minifiedNightFoggy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/foggy.jpg", "./assets/bgAt8K/minifiedFoggy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-drizzle {
+  @include bg-night(to right, "./assets/bgAt4K/nightDrizzle.jpg", "./assets/bgAt4K/minifiedNightDrizzle.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/drizzle.jpg", "./assets/bgAt8K/minifiedDrizzle.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-rainy {
+  @include bg-night(to right, "./assets/bgAt4K/nightRainy.jpg", "./assets/bgAt4K/minifiedNightRainy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/rainy.jpg", "./assets/bgAt8K/minifiedRainy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-snowy {
+  @include bg-night(to right, "./assets/bgAt4K/nightSnowy.jpg", "./assets/bgAt4K/minifiedNightSnowy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/snowy.jpg", "./assets/bgAt8K/minifiedSnowy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-showers {
+  @include bg-night(to right, "./assets/bgAt4K/nightShowers.jpg", "./assets/bgAt4K/minifiedNightShowers.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/showers.jpg", "./assets/bgAt8K/minifiedShowers.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
+}
+
+.night-stormy {
+  @include bg-night(to right, "./assets/bgAt4K/nightStormy.jpg", "./assets/bgAt4K/minifiedNightStormy.jpeg");
+  aspect-ratio: 16/9;
+
+  &.wide {
+    background-image: none;
+
+    @media screen and (width > 1024px) {
+      @include bg-night(to right, "./assets/bgAt8K/stormy.jpg", "./assets/bgAt8K/minifiedStormy.jpeg");
+      aspect-ratio: 32/9;
+    }
+  }
 }
 
 .welcome-icon {
@@ -36,4 +316,12 @@
 
 .spin {
   @include rotateSVG;
+}
+
+.weather-icon {
+  @include weather-icon;
+}
+
+.swap-icon {
+  @include swap-icon;
 }
