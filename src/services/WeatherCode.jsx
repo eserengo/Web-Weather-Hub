@@ -22,7 +22,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Clear sky'
             : output === 'class'
               ? 'day-clear'
-              : <i className='weather-icon'><DayClearSvg /></i>
+              : <i className='weather-icon oversized'><DayClearSvg /></i>
         )
       }
       case (input === 1): {
@@ -31,7 +31,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Mainly clear'
             : output === 'class'
               ? 'day-mainly-clear'
-              : <i className='weather-icon'><DayCloudySvg /></i>
+              : <i className='weather-icon oversized'><DayCloudySvg /></i>
         )
       }
       case (input === 2): {
@@ -40,7 +40,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Partly cloudy'
             : output === 'class'
               ? 'day-partly-cloudy'
-              : <i className='weather-icon'><DayCloudySvg /></i>
+              : <i className='weather-icon oversized'><DayCloudySvg /></i>
         )
       }
       case (input === 3): {
@@ -49,7 +49,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Overcast'
             : output === 'class'
               ? 'day-overcast'
-              : <i className='weather-icon'><OvercastSvg /></i>
+              : <i className='weather-icon oversized'><OvercastSvg /></i>
         )
       }
       case (input < 40): {
@@ -61,7 +61,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Fog'
             : output === 'class'
               ? 'day-foggy'
-              : <i className='weather-icon'><FoggySvg /></i>
+              : <i className='weather-icon oversized'><FoggySvg /></i>
         )
       }
       case (input < 60): {
@@ -70,7 +70,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Drizzle'
             : output === 'class'
               ? 'day-drizzle'
-              : <i className='weather-icon'><DrizzleSvg /></i>
+              : <i className='weather-icon oversized'><DrizzleSvg /></i>
         )
       }
       case (input < 70): {
@@ -79,7 +79,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Rain'
             : output === 'class'
               ? 'day-rainy'
-              : <i className='weather-icon'><DayRainySvg /></i>
+              : <i className='weather-icon oversized'><DayRainySvg /></i>
         )
       }
       case (input < 80): {
@@ -88,7 +88,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Snow'
             : output === 'class'
               ? 'day-snowy'
-              : <i className='weather-icon'><DaySnowySvg /></i>
+              : <i className='weather-icon oversized'><DaySnowySvg /></i>
         )
       }
       case (input < 90): {
@@ -97,7 +97,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Showers'
             : output === 'class'
               ? 'day-showers'
-              : <i className='weather-icon'><ShowersSvg /></i>
+              : <i className='weather-icon oversized'><ShowersSvg /></i>
         )
       }
       case (input < 100): {
@@ -106,7 +106,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Storms'
             : output === 'class'
               ? 'day-stormy'
-              : <i className='weather-icon'><StormySvg /></i>
+              : <i className='weather-icon oversized'><StormySvg /></i>
         )
       }
       default:
@@ -120,7 +120,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Clear sky'
             : output === 'class'
               ? 'night-clear'
-              : <i className='weather-icon'><NightClearSvg /></i>
+              : <i className='weather-icon oversized'><NightClearSvg /></i>
         )
       }
       case (input === 1): {
@@ -129,7 +129,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Mainly clear'
             : output === 'class'
               ? 'night-mainly-clear'
-              : <i className='weather-icon'><NightCloudySvg /></i>
+              : <i className='weather-icon oversized'><NightCloudySvg /></i>
         )
       }
       case (input === 2): {
@@ -138,7 +138,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Partly cloudy'
             : output === 'class'
               ? 'night-partly-cloudy'
-              : <i className='weather-icon'><NightCloudySvg /></i>
+              : <i className='weather-icon oversized'><NightCloudySvg /></i>
         )
       }
       case (input === 3): {
@@ -147,7 +147,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Overcast'
             : output === 'class'
               ? 'night-overcast'
-              : <i className='weather-icon'><OvercastSvg /></i>
+              : <i className='weather-icon oversized'><OvercastSvg /></i>
         )
       }
       case (input < 40): {
@@ -159,7 +159,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Fog'
             : output === 'class'
               ? 'night-foggy'
-              : <i className='weather-icon'><FoggySvg /></i>
+              : <i className='weather-icon oversized'><FoggySvg /></i>
         )
       }
       case (input < 60): {
@@ -168,7 +168,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Drizzle'
             : output === 'class'
               ? 'night-drizzle'
-              : <i className='weather-icon'><DrizzleSvg /></i>
+              : <i className='weather-icon oversized'><DrizzleSvg /></i>
         )
       }
       case (input < 70): {
@@ -177,7 +177,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Rain'
             : output === 'class'
               ? 'night-rainy'
-              : <i className='weather-icon'><NightRainySvg /></i>
+              : <i className='weather-icon oversized'><NightRainySvg /></i>
         )
       }
       case (input < 80): {
@@ -186,7 +186,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Snow'
             : output === 'class'
               ? 'night-snowy'
-              : <i className='weather-icon'><NightSnowySvg /></i>
+              : <i className='weather-icon oversized'><NightSnowySvg /></i>
         )
       }
       case (input < 90): {
@@ -195,7 +195,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Showers'
             : output === 'class'
               ? 'night-showers'
-              : <i className='weather-icon'><ShowersSvg /></i>
+              : <i className='weather-icon oversized'><ShowersSvg /></i>
         )
       }
       case (input < 100): {
@@ -204,7 +204,7 @@ const WeatherCode = ({ input, output, isDay }) => {
             ? 'Storms'
             : output === 'class'
               ? 'night-stormy'
-              : <i className='weather-icon'><StormySvg /></i>
+              : <i className='weather-icon oversized'><StormySvg /></i>
         )
       }
       default:

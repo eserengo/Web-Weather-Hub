@@ -10,9 +10,9 @@ const Weather = () => {
   }, [navigate]);
 
   return (
-    <article className='row position-relative g-0 align-items-center justify-content-center justify-content-sm-start'>
+    <article className='row g-0 align-items-center justify-content-center justify-content-sm-start'>
       <Outlet />
-      <aside className='tab-bar col-12 col-sm-6 col-lg-4'>
+      <aside className='tab-bar col-12 col-sm-6 col-lg-5'>
         <TabBar />
       </aside>
     </article>

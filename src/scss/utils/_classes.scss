@@ -12,10 +12,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/dayClear.jpg", "./assets/bgAt8K/minifiedDayClear.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -26,10 +26,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/mainlyClear.jpg", "./assets/bgAt8K/minifiedMainlyClear.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -40,10 +40,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/partlyCloudy.jpg", "./assets/bgAt8K/minifiedPartlyCloudy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -54,10 +54,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/overcast.jpg", "./assets/bgAt8K/minifiedOvercast.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -68,10 +68,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/foggy.jpg", "./assets/bgAt8K/minifiedFoggy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -82,10 +82,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/drizzle.jpg", "./assets/bgAt8K/minifiedDrizzle.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -96,10 +96,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/rainy.jpg", "./assets/bgAt8K/minifiedRainy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -110,10 +110,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/snowy.jpg", "./assets/bgAt8K/minifiedSnowy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -124,10 +124,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/showers.jpg", "./assets/bgAt8K/minifiedShowers.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -138,10 +138,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-day(to right, "./assets/bgAt8K/stormy.jpg", "./assets/bgAt8K/minifiedStormy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -152,10 +152,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/nightClear.jpg", "./assets/bgAt8K/minifiedNightClear.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -166,10 +166,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/mainlyClear.jpg", "./assets/bgAt8K/minifiedMainlyClear.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -180,10 +180,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/partlyCloudy.jpg", "./assets/bgAt8K/minifiedPartlyCloudy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -194,10 +194,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/overcast.jpg", "./assets/bgAt8K/minifiedOvercast.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -208,10 +208,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/foggy.jpg", "./assets/bgAt8K/minifiedFoggy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -222,10 +222,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/drizzle.jpg", "./assets/bgAt8K/minifiedDrizzle.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -236,10 +236,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/rainy.jpg", "./assets/bgAt8K/minifiedRainy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -250,10 +250,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/snowy.jpg", "./assets/bgAt8K/minifiedSnowy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -264,10 +264,10 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/showers.jpg", "./assets/bgAt8K/minifiedShowers.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
@@ -278,36 +278,48 @@
 
   &.wide {
     background-image: none;
+    aspect-ratio: 32/9;
 
-    @media screen and (width > 1024px) {
+    @media screen and (width > 768px) {
       @include bg-night(to right, "./assets/bgAt8K/stormy.jpg", "./assets/bgAt8K/minifiedStormy.jpeg");
-      aspect-ratio: 32/9;
     }
   }
 }
 
-.welcome-icon {
-  @include icon-options();
+.welcome-logo-icon,
+.logo-icon,
+.nav-icon:not(.menu .nav-icon),
+.swap-icon,
+.reload-icon {
+  @include icon($clr-offWhite);
 }
 
-.custom-icon {
-  @include icon();
+.welcome-arrow-icon,
+.menu .nav-icon,
+.weather-icon {
+  @include icon($clr-offBlack);
 }
 
-.custom-wrap {
-  @include button(true);
+.logo-link,
+.nav-link:not(.menu .nav-link) {
+  @include link($clr-offWhite);
+}
+
+.tab-link,
+.menu .nav-link {
+  @include link($clr-offBlack);
 }
 
 .custom-btn {
-  @include button(false);
+  @include button();
 }
 
-.custom-bar {
-  @include fixed-screen();
+.mobile-navbar {
+  @include mobile-navbar();
 }
 
 .tab-bar {
-  @include bar();
+  @include tab-bar();
 }
 
 .fs-7 {
@@ -315,13 +327,9 @@
 }
 
 .spin {
-  @include rotateSVG;
+  @include spinners;
 }
 
-.weather-icon {
-  @include weather-icon;
-}
-
-.swap-icon {
-  @include swap-icon;
+.carousel {
+  @include slider;
 }

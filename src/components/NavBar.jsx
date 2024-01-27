@@ -15,88 +15,60 @@ const NavBar = () => {
 
   const Links = () => (
     <>
-      <NavLink to={'weather'} className='custom-wrap'>
-        {({ isActive }) =>
-          isActive ? (
-            <div className='btn-container'>
-              <i className='custom-icon'>
-                <MyWeatherSvg />
-              </i>
-              <span className='text'>My Weather</span>
-            </div>
-          ) : (
-            <i className='custom-icon'>
-              <MyWeatherSvg />
-            </i>
-          )}
+      <NavLink to={'weather'} className='nav-link'>
+        <div className='link-container'>
+          <i className='link-icon bordered'>
+            <MyWeatherSvg />
+          </i>
+          <span className='text'>My Weather</span>
+        </div>
       </NavLink>
-      <NavLink to={'location'} className='custom-wrap'>
-        {({ isActive }) =>
-          isActive ? (
-            <div className='btn-container'>
-              <i className='custom-icon'>
-                <PinSvg />
-              </i>
-              <span className='text'>My Location</span>
-            </div>
-          ) : (
-            <i className='custom-icon'>
-              <PinSvg />
-            </i>
-          )}
+      <NavLink to={'location'} className='nav-link'>
+        <div className='link-container'>
+          <i className='link-icon bordered'>
+            <PinSvg />
+          </i>
+          <span className='text'>My Location</span>
+        </div>
       </NavLink>
-      <NavLink to={'about'} className='custom-wrap'>
-        {({ isActive }) =>
-          isActive ? (
-            <div className='btn-container'>
-              <i className='custom-icon'>
-                <AboutSvg />
-              </i>
-              <span className='text'>About</span>
-            </div>
-          ) : (
-            <i className='custom-icon'>
-              <AboutSvg />
-            </i>
-          )}
+      <NavLink to={'about'} className='nav-link'>
+        <div className='link-container'>
+          <i className='link-icon bordered'>
+            <AboutSvg />
+          </i>
+          <span className='text'>About</span>
+        </div>
       </NavLink>
-      <NavLink to={'contact'} className='custom-wrap'>
-        {({ isActive }) =>
-          isActive ? (
-            <div className='btn-container'>
-              <i className='custom-icon'>
-                <ContactSvg />
-              </i>
-              <span className='text'>Contact</span>
-            </div>
-          ) : (
-            <i className='custom-icon'>
-              <ContactSvg />
-            </i>
-          )}
+      <NavLink to={'contact'} className='nav-link'>
+        <div className='link-container'>
+          <i className='link-icon bordered'>
+            <ContactSvg />
+          </i>
+          <span className='text'>Contact</span>
+        </div>
       </NavLink>
     </>
   )
 
   return (
     <>
-      <nav className='d-block d-sm-none'>
-        <i className='custom-icon' onClick={toggleIsCollapsed}>
+      <nav className='d-block d-md-none'>
+        <i className='nav-icon drop' onClick={toggleIsCollapsed}>
           <MenuSvg />
         </i>
-        <div className={`custom-bar ${isCollapsed ? 'closed' : 'open'}`}>
+        <div className={`mobile-navbar ${isCollapsed ? 'closed' : 'open'}`}>
           <span className='menu'>
-            <i className='custom-icon position-absolute top-0 end-0 m-2' onClick={toggleIsCollapsed}>
+            <i className='nav-icon drop position-absolute top-0 end-0 m-3' onClick={toggleIsCollapsed}>
               <CloseSvg />
             </i>
-            <div className='vh-100 d-flex flex-column align-items-end justify-content-center gap-3'>
+            <div className='vh-100 d-flex flex-column align-items-start justify-content-center gap-5'>
               <Links />
             </div>
           </span>
         </div>
       </nav>
 
-      <nav className='d-none d-sm-flex align-items-center justify-content-between gap-2'>
+      <nav className='d-none d-md-flex align-items-center justify-content-between gap-3'>
         <Links />
       </nav>
     </>

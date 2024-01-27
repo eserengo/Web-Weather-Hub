@@ -17,17 +17,9 @@ $container-max-widths: (
 );
 
 // Theme colors
-// Base
 $clr-offWhite: hsl(0, 0%, 97%);
 $clr-offBlack: hsl(0, 0%, 3%);
 
-// Lightness
-$drk-offWhite-25: darken($clr-offWhite, 25%);
-$drk-offWhite-50: darken($clr-offWhite, 50%);
-$lgt-offBlack-25: lighten($clr-offBlack, 25%);
-$lgt-offBlack-50: lighten($clr-offBlack, 50%);
-
-// Opaque
 $opq-offBlack-75: rgba($clr-offBlack, 0.75);
 $opq-offBlack-50: rgba($clr-offBlack, 0.5);
 $opq-offBlack-25: rgba($clr-offBlack, 0.25);

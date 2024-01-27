@@ -18,7 +18,7 @@ const ErrorFallback = ({ error }) => {
             <Link onClick={resetBoundary} className='custom-btn'>
               <div className='btn-container'>
                 <span className='text'>Go Back</span>
-                <i className='custom-icon'>
+                <i className='btn-icon'>
                   <LeftArrowSvg />
                 </i>
               </div>

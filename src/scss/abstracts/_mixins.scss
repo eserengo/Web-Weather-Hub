@@ -8,38 +8,6 @@
   background-position: center center;
 }
 
-@mixin icon-options {
-  width: 2rem;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $clr-offWhite;
-  border: 1px solid $drk-offWhite-25;
-  border-radius: 50%;
-
-  & .svg {
-    width: 1rem;
-    aspect-ratio: 1;
-  }
-
-  @media screen and (width >= 576px) {
-    width: 2.5rem;
-
-    & .svg {
-      width: 1.5rem;
-    }
-  }
-
-  @media screen and (width >= 1024px) {
-    width: 3rem;
-
-    & .svg {
-      width: 2rem;
-    }
-  }
-}
-
 @mixin bg-day($dir, $optimizedOverlay, $minifiedOverlay) {
   background-image: 
     linear-gradient($dir, $opq-offBlack-75, $opq-offBlack-50, $opq-offBlack-25, transparent),
@@ -56,135 +24,12 @@
   @include bg-options();
 }
 
-@mixin icon {
-  @include icon-options();
-    
-  & .svg {
-    & .path {
-      fill: $lgt-offBlack-50;
-    }
-    & .shape {
-      stroke: $lgt-offBlack-50;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    border-color: $drk-offWhite-50;
-    & .svg {
-      & .path {
-        fill: $clr-offBlack;
-      }
-      & .shape {
-        stroke: $clr-offBlack;
-      }
-    }
-  }
-
-  &:active {
-    background-image: linear-gradient(45deg, $clr-offBlack, $lgt-offBlack-25);
-    border-color: $clr-offBlack;
-    & .svg {
-      & .path {
-        fill: $clr-offWhite;
-      }
-      & .shape {
-        stroke: $clr-offWhite;
-      }
-    }
-  }
-}
-
-@mixin button($wrap) {
-  text-decoration: none;
-
-  & .btn-container {
-    background-color: $clr-offWhite;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid $drk-offWhite-25;
-    border-radius: 2rem;
-    padding: 0.125rem;
-
-    @if($wrap) {
-      justify-content: flex-start;
-    } @else {
-      justify-content: flex-end;
-    }
-
-    & .text {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: $lgt-offBlack-50;
-
-      @if($wrap) {
-        margin-right: calc(0.75rem - 0.125rem);
-      } @else {
-        margin-left: calc(0.75rem - 0.125rem);
-      }
-    }
-
-    &:hover,
-    &:focus {
-      border-color: $drk-offWhite-50;
-      & .custom-icon {
-        border-color: $drk-offWhite-50;
-        & .svg {
-          & .path {
-            fill: $clr-offBlack;
-          }
-          & .shape {
-            stroke: $clr-offBlack;
-          }
-        }
-      }
-      & .text {
-        color: $clr-offBlack;
-      }
-    }
-  }
-
-  &.active,
-  &:active {
-    & .btn-container {
-      border-color: $drk-offWhite-50;
-      & .custom-icon {
-        background-image: linear-gradient(45deg, $clr-offBlack, $lgt-offBlack-25);
-        border-color: $clr-offBlack;
-        & .svg {
-          & .path {
-            fill: $clr-offWhite;
-          }
-          & .shape {
-            stroke: $clr-offWhite;
-          }
-        }
-      }
-      & .text {
-        color: $clr-offBlack;
-      }
-    }
-  }
-
-  @media screen and (width >= 1024px) {
-    & .btn-container {
-      border-radius: 2.5rem;
-      & .text {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-@mixin fixed-screen {
+@mixin mobile-navbar {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
   transition: all 0.7s ease-in;
 
@@ -202,25 +47,35 @@
     top: 0;
     right: 0;
     background-color: $clr-offWhite;
-    padding-inline: 2rem 0.5rem;
-    border-left: 1px solid $drk-offWhite-25;
+    padding-inline: 3rem 1rem;
+    border-left: 2px solid darken($clr-offWhite, 25%);
   }
 }
 
-@mixin bar {
+@mixin tab-bar {
   display: inline-block;
   background-color: $clr-offWhite;
-  border: 1px solid $drk-offWhite-25;
+  border: 2px solid darken($clr-offWhite, 25%);
   border-radius: 2rem;
   padding: 0.25rem;
   z-index: 1;
+  position: fixed;
+  left: 0.5rem;
+  top: 90vh;
 
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  @media screen and (width < 576px) {
+    width: calc(100% - 1rem);
+  }
+
+  @media screen and (width >= 576px) {
+    position: absolute;
+    left: 1rem;
+    top: 40%;
+  }
 
   @media screen and (width >= 1024px) {
     border-radius: 2.5rem;
+    top: 55%;
   }
 }
 
@@ -228,7 +83,7 @@
   font-size: $fnt-size-075;
 }
 
-@mixin rotateSVG {
+@mixin spinners {
   & .svg {
     & .clockwise {
       animation: clockwise 3s linear infinite;
@@ -244,33 +99,217 @@
   }
 }
 
-@mixin weather-icon {
-  & .svg {
-    width: 1.5rem;
-    aspect-ratio: 1;
+@mixin button {
+  text-decoration: none;
 
-    & .group {
-      fill: $clr-offBlack;
+  & .btn-container {
+    background-color: $clr-offWhite;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    border: 2px solid lighten($clr-offBlack, 75%);
+    border-radius: 2rem;
+    padding: 0.125rem;
+
+    & .btn-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid lighten($clr-offBlack, 75%);
+      border-radius: 50%;
+      padding: 0.5rem;
+      & .svg {
+        width: 1.5rem;
+        aspect-ratio: 1;
+        & .path {
+          fill: $opq-offBlack-50;
+        }
+        & .shape {
+          stroke: $opq-offBlack-50;
+        }
+      }
+    }
+
+    & .text {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: $opq-offBlack-50;
+      margin-left: calc(0.75rem - 0.125rem);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: darken($clr-offWhite, 33%);
+      & .btn-icon {
+        border-color: darken($clr-offWhite, 33%);
+        & .svg {
+          & .path {
+            fill: $clr-offBlack;
+          }
+          & .shape {
+            stroke: $clr-offBlack;
+          }
+        }
+      }
+      & .text {
+        color: $clr-offBlack;
+      }
+    }
+  }
+
+  @media screen and (width >= 1024px) {
+    & .btn-container {
+      border-radius: 2.5rem;
+      gap: 1rem;
+      & .text {
+        font-size: 1rem;
+        margin-left: calc(1rem - 0.125rem);
+      }
     }
   }
 }
 
-@mixin swap-icon {
-  & .svg {
-    width: 1.5rem;
-    aspect-ratio: 1;
 
-    & .shape {
-      stroke: $clr-offWhite;
+@mixin link($clr) {
+  $opq-clr: rgba($clr, 0.5);
+  text-decoration: none;
+
+  & .link-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.25rem;
+
+    & .link-icon {
+      @include icon($opq-clr);
+    }
+
+    & .text {
+      font-size: 0.75rem;
+      color: $opq-clr;
     }
   }
 
-  & :hover,
-  & :focus {
-    cursor: pointer;
+  .link-icon {
+    @include icon($opq-clr);
+  }
 
+  &.active {
+    .link-icon {
+      @include icon($clr);
+    }
+    .text {
+      color: $clr;
+      text-decoration: underline;
+      text-decoration-color: $clr;
+      text-underline-offset: 0.5rem;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .link-icon {
+      @include icon($clr);
+    }
+    .text {
+      color: $clr;
+    }
+  }
+
+  @media screen and (width >= 1024px) {
+    & .link-container {
+      & .link-icon {
+        & .svg {
+          width: 2rem;
+        }
+      }
+      & .text {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@mixin icon($clr) {
+  $opq-clr: rgba($clr, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .svg {
+    width: 1.5rem;
+    aspect-ratio: 1;
+    & .path,
+    & .group {
+      fill: $clr;
+    }
     & .shape {
-      filter: drop-shadow(0px 0px 1px $clr-offWhite);
+      stroke: $clr;
+    }
+  }
+
+  &.drop {
+    & .path,
+    & .group {
+      fill: $opq-clr;
+    }
+    & .shape {
+      stroke: $opq-clr;
+    }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      & .path,
+      & .group {
+        fill: $clr;
+      }
+      & .shape {
+        stroke: $clr;
+      }
+    }
+  }
+
+  &.bordered {
+    border: 2px solid $clr;
+    border-radius: 50%;
+    padding: 0.25rem;
+  }
+
+  &.oversized {
+    & .svg {
+      width: calc(2rem + 2.5vw);
+    }
+  }
+
+  @media screen and (width >= 1024px) {
+    & .svg {
+      width: 2rem;
+    }
+    &.bordered {
+      padding: 0.5rem;
+    }
+  }
+}
+
+@mixin slider {
+  background-color: $clr-offWhite;
+  border-radius: 0.75rem;
+
+  & .carousel-item {
+    min-height: 12rem;
+    padding: 0.5rem;
+
+    & .carousel-caption {
+      position: static;
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      gap: 1rem;
+      padding: 0.5rem 3rem;
     }
   }
 }
