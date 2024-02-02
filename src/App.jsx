@@ -8,9 +8,8 @@ import './App.scss'
 const App = () => {
   const Layout = lazy(() => import('./views/Layout'));
   const Weather = lazy(() => import('./views/Weather'));
-  const TodaysForecast = lazy(() => import('./views/TodaysForecast'));
-  const TomorrowsForecast = lazy(() => import('./views/TomorrowsForecast'));
-  const ThisWeeksForecast = lazy(() => import('./views/ThisWeeksForecast'));
+  const Today = lazy(() => import('./views/Today'));
+  const Forecast = lazy(() => import('./views/Forecast'));
   const Location = lazy(() => import('./views/Location'));
   const About = lazy(() => import('./views/About'));
   const Contact = lazy(() => import('./views/Contact'));
@@ -29,16 +28,12 @@ const App = () => {
           children: [
             {
               path: 'today',
-              element: <TodaysForecast />,
+              element: <Today />,
             },
             {
-              path: 'tomorrow',
-              element: <TomorrowsForecast />
-            },
-            {
-              path: 'thisweek',
-              element: <ThisWeeksForecast />,
-            },
+              path: 'forecast',
+              element: <Forecast />,
+            }
           ],
         },
         {

@@ -2,10 +2,6 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import MenuSvg from '../assets/icons/menu.svg?react'
 import CloseSvg from '../assets/icons/close.svg?react'
-import MyWeatherSvg from '../assets/icons/my-weather.svg?react'
-import PinSvg from '../assets/icons/pin.svg?react'
-import AboutSvg from '../assets/icons/about.svg?react'
-import ContactSvg from '../assets/icons/contact.svg?react'
 
 const NavBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -16,43 +12,23 @@ const NavBar = () => {
   const Links = () => (
     <>
       <NavLink to={'weather'} className='nav-link'>
-        <div className='link-container'>
-          <i className='link-icon bordered'>
-            <MyWeatherSvg />
-          </i>
-          <span className='text'>My Weather</span>
-        </div>
+        <span className='text para'>My Weather</span>
       </NavLink>
       <NavLink to={'location'} className='nav-link'>
-        <div className='link-container'>
-          <i className='link-icon bordered'>
-            <PinSvg />
-          </i>
-          <span className='text'>My Location</span>
-        </div>
+        <span className='text para'>My Location</span>
       </NavLink>
       <NavLink to={'about'} className='nav-link'>
-        <div className='link-container'>
-          <i className='link-icon bordered'>
-            <AboutSvg />
-          </i>
-          <span className='text'>About</span>
-        </div>
+        <span className='text para'>About</span>
       </NavLink>
       <NavLink to={'contact'} className='nav-link'>
-        <div className='link-container'>
-          <i className='link-icon bordered'>
-            <ContactSvg />
-          </i>
-          <span className='text'>Contact</span>
-        </div>
+        <span className='text para'>Contact</span>
       </NavLink>
     </>
   )
 
   return (
     <>
-      <nav className='d-block d-md-none'>
+      <nav className='d-block d-sm-none'>
         <i className='nav-icon drop' onClick={toggleIsCollapsed}>
           <MenuSvg />
         </i>
@@ -68,7 +44,7 @@ const NavBar = () => {
         </div>
       </nav>
 
-      <nav className='d-none d-md-flex align-items-center justify-content-between gap-3'>
+      <nav className='d-none d-sm-flex align-items-center justify-content-between gap-3'>
         <Links />
       </nav>
     </>

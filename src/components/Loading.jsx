@@ -1,4 +1,4 @@
-import LoadingGears from "./icons/LoadingGears"
+import LoadingGears from './icons/LoadingGears'
 
 const Loading = () => (
   <main className='container-fluid vh-100 p-2'>

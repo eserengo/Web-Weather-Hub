@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { setIsDay } from '../App/isDaySlice'
 import Loading from '../components/Loading'
 import WelcomeLogo from './icons/WelcomeLogo'
-import RightArrowSvg from '../assets/icons/right-arrow.svg?react'
+import RightArrowSvg from '../assets/icons/rightArrow.svg?react'
 
 const Welcome = () => {
   const isDay = useSelector(state => state.isDay);

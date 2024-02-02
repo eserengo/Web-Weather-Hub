@@ -3,7 +3,7 @@ import LogoSvg from '../../assets/icons/logo.svg?react'
 
 const Logo = () => {
   const Icon = () => (
-    <i className='link-icon bordered'>
+    <i className='link-icon'>
       <LogoSvg />
     </i>
   );
@@ -14,11 +14,9 @@ const Logo = () => {
         <Icon />
       </Link>
 
-      <Link to={'/'} className='logo-link d-none d-md-block'>
-        <div className='link-container'>
-          <Icon />
-          <span className='text'>Web Weather Hub</span>
-        </div>
+      <Link to={'/'} className='logo-link d-none d-md-flex align-items-center justify-content-start gap-1'>
+        <Icon />
+        <span className='text para'>Web Weather Hub</span>
       </Link>
     </>
   )

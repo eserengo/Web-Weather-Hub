@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useErrorBoundary } from 'react-error-boundary'
 import ErrorSign from '../components/icons/ErrorSign'
-import LeftArrowSvg from '../assets/icons/left-arrow.svg?react'
+import LeftArrowSvg from '../assets/icons/leftArrow.svg?react'
 import PropTypes from 'prop-types'
 
 const ErrorFallback = ({ error }) => {

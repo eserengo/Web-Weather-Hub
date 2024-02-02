@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Error404 from '../components/icons/Error404'
-import LeftArrowSvg from '../assets/icons/left-arrow.svg?react'
+import LeftArrowSvg from '../assets/icons/leftArrow.svg?react'
 
 const PageNotFound = () => (
   <main className='container-fluid vh-100 p-2'>
